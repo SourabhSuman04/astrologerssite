@@ -1,28 +1,47 @@
 <section id="blog">
-    <div class="container">
-        <h2 class="section-title">Cosmic Insights Blog</h2>
-        <p class="section-subtitle">Explore the mysteries of the universe through ancient wisdom and modern understanding</p>
+  <div class="container">
+    <h2 class="section-title">Cosmic Insights Blog</h2>
+    <p class="section-subtitle">
+      Explore the mysteries of the universe through ancient wisdom and modern understanding
+    </p>
 
-        <div class="blog-grid">
-            <article class="blog-card" *ngFor="let post of blogPosts" #blogCard [class.visible]="">
-                <div class="blog-image "><img [src]="post.imagePath" alt="" class="blog-image"/></div>
-                <div class="blog-content">
-                    <p class="blog-date">{{ post.publishDate }}</p>
-                    <h3 class="blog-title">{{ post.postTitle }}</h3>
-                    <p>{{ post.excerpt }}</p>
-                    <button class="read-more-btn" (click)="openModal(post.id)">Read More</button>
-                </div>
-            </article>
+    <div class="blog-grid">
+      <article
+        class="blog-card"
+        *ngFor="let post of (showAll ? blogPosts : (blogPosts | slice:0:3))"
+        #blogCard
+        [class.visible]="true"
+      >
+        <div class="blog-image">
+          <img [src]="post.imagePath" [alt]="post.postTitle" class="blog-image" />
         </div>
+        <div class="blog-content">
+          <p class="blog-date">{{ post.publishDate | date }}</p>
+          <h3 class="blog-title">{{ post.postTitle }}</h3>
+          <p>{{ post.excerpt }}</p>
+          <button class="read-more-btn" (click)="openModal(post.id)">
+            Read More
+          </button>
+        </div>
+      </article>
     </div>
+
+    <!-- Show "See More" only if NOT showing all -->
+    <div class="see-more" *ngIf="!showAll" (click)="show()">
+      <a href="/#/blog" class="see-more-btn">
+        See More →
+      </a>
+    </div>
+  </div>
 </section>
 
+<!-- Modal -->
 <app-modal
-    *ngIf="selectedBlogPost"
-    [modalId]="selectedBlogPost.id"
-    [title]="selectedBlogPost.postTitle"
-    [date]="selectedBlogPost.publishDate"
-    [content]="selectedBlogPost.content"
-    [isOpen]="isModalOpen"
-    (closeModalEvent)="closeModal()"
+  *ngIf="selectedBlogPost"
+  [modalId]="selectedBlogPost.id"
+  [title]="selectedBlogPost.postTitle"
+  [date]="selectedBlogPost.publishDate"
+  [content]="selectedBlogPost.content"
+  [isOpen]="isModalOpen"
+  (closeModalEvent)="closeModal()"
 ></app-modal>

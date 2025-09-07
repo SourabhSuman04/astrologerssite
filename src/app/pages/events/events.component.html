@@ -2,13 +2,13 @@
   <div class="container">
     <h2 class="section-title">Cosmic Events</h2>
     <p class="section-subtitle">
-      Step into cosmic harmony with our unique astrological events and spritual gatherings.
+      Step into cosmic harmony with our unique astrological events and spiritual gatherings.
     </p>
 
     <div class="events-grid">
       <article
         class="event-card"
-        *ngFor="let event of events"
+        *ngFor="let event of (showAll ? events : (events | slice:0:3))"
         #eventCard
         [class.visible]="isCardVisible(eventCard)"
       >
@@ -16,7 +16,7 @@
           <img [src]="event.imagePath" [alt]="event.eventTitle" />
         </div>
         <div class="event-content">
-          <p class="event-date">{{ event.eventDate }}</p>
+          <p class="event-date">{{ event.eventDate | date }}</p>
           <h3 class="event-title">{{ event.eventTitle }}</h3>
           <p>{{ event.excerpt }}</p>
           <button class="read-more-btn" (click)="openModal(event.id)">
@@ -25,8 +25,16 @@
         </div>
       </article>
     </div>
+
+    <!-- See More Button -->
+    <div class="see-more"  *ngIf="!showAll" (click)="show()">
+      <a href="/#/event" class="see-more-btn">
+        See More →
+      </a>
+    </div>
   </div>
 </section>
+
 
 <app-modal
   *ngIf="selectedEvent"

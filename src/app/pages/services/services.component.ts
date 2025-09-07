@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { AstrologicalService } from '../../models/models';
+import { Router, RouterLink } from '@angular/router';
+
 
 interface Service {
   id: string;
@@ -52,7 +54,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         'Placement guidance for harmony',
         'Remedies without demolition'
       ],
-      websites:'vastu'
+      websites:'#/vastu'
     },
 {
   id: 'Numerology',
@@ -69,7 +71,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Relationship compatibility',
     'Career & success guidance'
   ],
-  websites:'numeralogy'
+  websites:'#/numeralogy'
 },
 {
   id: 'PalmReading',
@@ -100,7 +102,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         'Guidance for marriage decisions',
         // '<a href="http://jeevanhumsafar.com/" alt=""></a>'
       ],
-      websites:'jewan-humsafar'
+      websites:'#/jewan-humsafar'
     },
   {
   id: 'PreMarriageCounselling',
@@ -117,7 +119,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Guidance on expectations & responsibilities',
     'Conflict resolution & emotional support'
   ],
-  websites:'pre-marriage-counselling'
+  websites:'#/pre-marriage-counselling'
   }
   ];
 
@@ -133,7 +135,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
   closeModal() {
     this.selectedService = null;
   }
-    constructor() { }
+    constructor(private router:Router) { }
 
     ngOnInit(): void {
         // Initialization logic if any

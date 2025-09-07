@@ -25,6 +25,7 @@
       [routerLink]="item.route"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
+      (click)="toggleMobileMenu()"   
     >
       {{ item.label }}
     </a>

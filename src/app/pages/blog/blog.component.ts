@@ -13,7 +13,7 @@ import { CommonService } from '../../services/common.service';
 export class BlogComponent implements OnInit, AfterViewInit { // Implement AfterViewInit
     // Array to hold your blog post data
     blogPosts:BlogPost [] = [];
-
+showAll:boolean=false
     // Use ViewChildren to get references to all blog cards after they are rendered
     @ViewChildren('blogCard') blogCards!: QueryList<ElementRef>;
 
@@ -84,5 +84,9 @@ onScroll(): void {
     closeModal(): void {
         this.isModalOpen = false;
         this.selectedBlogPost = null;
+    }
+    show()
+    {
+        this.showAll=true
     }
 }

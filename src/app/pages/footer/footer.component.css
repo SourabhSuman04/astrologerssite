@@ -36,3 +36,42 @@ footer {
     border-top: 1px solid rgba(212, 175, 55, 0.2);
     opacity: 0.7;
 }
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-bottom p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #222; /* change as needed */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #ff9800; /* hover color */
+  transform: scale(1.1);
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+}
