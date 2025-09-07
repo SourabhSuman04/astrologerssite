@@ -1,0 +1,131 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 300px;
+  background: url('/assets/img/matru.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 10%;
+  /* background: #0a1628; */
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+  color: #ff7a00;
+}
+
+.about-text p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: white;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #062745;
+  padding: 40px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #021729;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  color: #fcf4f4;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #ede6e6;
+}
+
+.visit-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.visit-btn:hover {
+  background: #e65500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

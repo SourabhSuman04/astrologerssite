@@ -1,0 +1,38 @@
+<section id="products">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-subtitle">
+     Shop our curated collection of pooja items and effective remedies for a harmonious life.
+    </p>
+
+    <div class="product-slider-wrapper">
+      <button class="slider-btn prev" (click)="scrollSlider(-1)">&#10094;</button>
+
+      <div class="product-slider" #productSlider>
+        <div class="product-card" *ngFor="let product of products">
+          <div class="product-image">
+            <img [src]="product.imagePath" [alt]="product.name" />
+          </div>
+          <div class="product-info">
+            <div class="rating">
+              <span *ngFor="let star of [1,2,3,4,5]">
+                <!-- <i class="fa" [class.fa-star]="star <= product.rating" [class.fa-star-o]="star > product.rating"></i> -->
+              </span>
+            </div>
+            <h4 class="product-name">{{ product.name }}</h4>
+            <div class="product-price">
+              <span class="current">{{ product.price }}</span>
+              <!-- <span class="old" *ngIf="product.oldPrice">${{ product.oldPrice }}</span>
+              <span class="discount" *ngIf="product.discount">({{ product.discount }} off)</span> -->
+            </div>
+            <button class="call-btn" (click)="callProduct(product.contactNumber)">
+              📞 Call Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button class="slider-btn next" (click)="scrollSlider(1)">&#10095;</button>
+    </div>
+  </div>
+</section>

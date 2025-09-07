@@ -1,0 +1,125 @@
+.intro-section {
+  background: url('/assets/img/num.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color:#ff7a00 ;
+  }
+  .intro {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+
+.numbers-section {
+  padding: 60px 20px;
+  background: #062745;
+  color: white;
+}
+
+.container.two-column {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+      margin-top: 100px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fbfeff;
+}
+
+.numbers-grid-section {
+  flex: 1;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff7a00;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.num-card {
+  background: #061f34;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.num-card:hover {
+  transform: translateY(-5px);
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #062448;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.two-col-section {
+  padding: 60px 20px;
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .letter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+  }
+
+  .letter-card {
+    background: #673ab7;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+
+    .letter {
+      display: block;
+      font-size: 1.2rem;
+    }
+    .num {
+      font-size: 1rem;
+    }
+  }
+}

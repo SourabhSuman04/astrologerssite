@@ -1,0 +1,6 @@
+/* src/app/app.component.scss */
+/* No specific styles needed for app.component as it primarily acts as a container */
+main {
+    /* Adjust main content padding if header is fixed */
+    /* Approximate height of your fixed header */
+}

@@ -1,0 +1,50 @@
+<section id="ask-question" class="ask-question">
+    <div class="container">
+        <h2 class="section-title">Ask Your Cosmic Question</h2>
+        <p class="section-subtitle">Get personalized astrological insights for your specific situation</p>
+
+        <form class="question-form" #questionForm="ngForm" (ngSubmit)="onSubmitQuestion(questionForm)">
+            <div class="form-group">
+                <label for="q-name">Your Name</label>
+                <input type="text" id="q-name" name="name" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="q-email">Email Address</label>
+                <input type="email" id="q-email" name="email" ngModel required email>
+            </div>
+            <div class="form-group">
+                <label for="q-birthdate">Birth Date</label>
+                <input type="date" id="q-birthdate" name="birthdate" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="q-birthTime">Birth Time</label>
+                <input type="time" id="q-birthTime" name="birthTime" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="q-birthplace">Birth place</label>
+                <input type="text" id="q-birthplace" name="birthplace" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="q-contactno">contact no.</label>
+                <input type="number" id="q-contactno." name="contactno." ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="q-category">Question Category</label>
+                <select id="q-category" name="category" ngModel required>
+                    <option value="">Select a category</option>
+                    <option value="love">Love & Relationships</option>
+                    <option value="career">Career & Finance</option>
+                    <option value="health">Health & Wellness</option>
+                    <option value="spiritual">Spiritual Growth</option>
+                    <option value="family">Family & Home</option>
+                    <option value="general">General Life Guidance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="q-question">Your Question</label>
+                <textarea id="q-question" name="question" rows="5" placeholder="Please be as specific as possible about your situation and what guidance you're seeking..." ngModel required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Question</button>
+        </form>
+    </div>
+</section>

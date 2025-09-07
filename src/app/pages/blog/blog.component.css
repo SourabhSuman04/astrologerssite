@@ -1,0 +1,80 @@
+/* src/app/components/blog/blog.component.scss */
+
+
+.blog-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+.blog-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none; /* remove animation */
+}
+
+
+.blog-card {
+    background: rgba(30, 58, 95, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    backdrop-filter: blur(10px);
+
+    /* --- Key styles for the animation --- */
+    opacity: 0; /* Starts invisible */
+    transform: translateY(30px); /* Starts slightly below its final position */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Defines the animation duration and timing */
+    /* ---------------------------------- */
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+.blog-image {
+    height: 200px;
+    background: var(--gradient-cosmic);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.blog-content {
+    padding: 2rem;
+}
+
+.blog-date {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.blog-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.blog-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

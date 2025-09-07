@@ -1,0 +1,24 @@
+/* src/app/components/ask-question/ask-question.component.scss */
+.ask-question {
+    background: rgba(30, 58, 95, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.question-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ask-question::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/img/photo-1503264116251-35a269479413.avif') center/cover no-repeat;
+  opacity: 0.2; /* lower = more color visible */
+  z-index: 0;
+}
+
+.ask-question > * {
+  position: relative;
+  z-index: 1;
+}

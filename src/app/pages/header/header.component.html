@@ -1,0 +1,41 @@
+<header class="header" [class.fixed]="isFixed">
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <i class="fa fa-headphones"></i>
+      <span>Talk to our Astrologer - </span>
+      <a href="tel:+91-9413987619">+91-9413987619</a>
+    </div>
+    <div class="top-right">
+      <i class="fa fa-envelope"></i>
+      <span>Email us - </span>
+      <a href="mailto:devegya123@gmail.com">devegya123&#64;gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="main-header">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Astrology Logo" />
+    </div>
+    <nav>
+     <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+  <li *ngFor="let item of navItems">
+    <a
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ item.label }}
+    </a>
+  </li>
+</ul>
+
+      <div class="mobile-menu" (click)="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+</header>

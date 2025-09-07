@@ -1,0 +1,28 @@
+<section id="blog">
+    <div class="container">
+        <h2 class="section-title">Cosmic Insights Blog</h2>
+        <p class="section-subtitle">Explore the mysteries of the universe through ancient wisdom and modern understanding</p>
+
+        <div class="blog-grid">
+            <article class="blog-card" *ngFor="let post of blogPosts" #blogCard [class.visible]="">
+                <div class="blog-image "><img [src]="post.imagePath" alt="" class="blog-image"/></div>
+                <div class="blog-content">
+                    <p class="blog-date">{{ post.publishDate }}</p>
+                    <h3 class="blog-title">{{ post.postTitle }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <button class="read-more-btn" (click)="openModal(post.id)">Read More</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<app-modal
+    *ngIf="selectedBlogPost"
+    [modalId]="selectedBlogPost.id"
+    [title]="selectedBlogPost.postTitle"
+    [date]="selectedBlogPost.publishDate"
+    [content]="selectedBlogPost.content"
+    [isOpen]="isModalOpen"
+    (closeModalEvent)="closeModal()"
+></app-modal>

@@ -1,0 +1,77 @@
+<section class="services-section" id="service">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+            Several methods of astrology are prevalent in India.
+        </p>
+
+        <div class="services-grid">
+
+         <!-- <div class="services-container"> -->
+  <div class="service-card" *ngFor="let service of services">
+    <div class="icon">
+      <img [src]="service.icon" [alt]="service.title" width="50">
+    </div>
+    <h3>{{ service.title }}</h3>
+    <div class="underline"></div>
+    <p>{{ service.shortDesc }}</p>
+      <a href="javascript:void(0)" (click)="openModal(service)">READ MORE</a>
+  </div>
+<!-- </div> -->
+
+            <!-- <div class="service-card">
+                <div class="icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Crystal Ball</h3>
+                <div class="underline"></div>
+                <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+                <a href="#">READ MORE</a>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <i class="fas fa-star-of-david"></i>
+                </div>
+                <h3>Kundli Dosh</h3>
+                <div class="underline"></div>
+                <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+                <a href="#">READ MORE</a>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <h3>Tarot Reading</h3>
+                <div class="underline"></div>
+                <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+                <a href="#">READ MORE</a>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">
+                    <i class="fas fa-hand-paper"></i>
+                </div>
+                <h3>Palm Reading</h3>
+                <div class="underline"></div>
+                <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+                <a href="#">READ MORE</a>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<div class="modal-overlay" *ngIf="selectedService">
+    <div class="modal">
+        <button class="close-btn" (click)="closeModal()">✖</button>
+        <h2>{{ selectedService.title }}</h2>
+        <p>{{ selectedService.fullDesc }}</p>
+        <ul>
+            <li *ngFor="let feature of selectedService?.features">{{ feature }}</li>
+        </ul>
+          <div *ngIf="selectedService.websites">
+    🌐 <a [href]="selectedService.websites" target="_blank">Visit Website</a>
+  </div>
+    </div>
+</div>
