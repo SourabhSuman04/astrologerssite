@@ -61,7 +61,7 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #222; /* change as needed */
+  /* background: #222;  */
   color: white;
   transition: all 0.3s ease;
 }

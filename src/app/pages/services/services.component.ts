@@ -39,7 +39,8 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Planetary positions & their effects',
     'Life-path, career & relationship guidance',
     'Remedies for challenges & doshas'
-  ]
+  ],
+     websites:'#/astrology'
 },
     {
       id: 'vastu',
@@ -88,23 +89,39 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Future predictions & remedies'
   ]
 },
-    {
-      id: 'matrimonial',
-      title: 'Matrimonial',
-      icon: 'assets/img/1.png',
-      shortDesc: 'Matchmaking services guided by astrology for happy relationships.',
-      fullDesc: `Our Matrimonial Astrology service helps you find the most compatible 
-      life partner through horoscope matching and dosha analysis.`,
-      features: [
-        'Kundli matching (Guna Milan)',
-        'Manglik Dosha remedies',
-        'Compatibility analysis',
-        'Guidance for marriage decisions',
-        // '<a href="http://jeevanhumsafar.com/" alt=""></a>'
-      ],
-      websites:'#/jewan-humsafar'
-    },
+    // {
+    //   id: 'matrimonial',
+    //   title: 'Matrimonial',
+    //   icon: 'assets/img/1.png',
+    //   shortDesc: 'Matchmaking services guided by astrology for happy relationships.',
+    //   fullDesc: `Our Matrimonial Astrology service helps you find the most compatible 
+    //   life partner through horoscope matching and dosha analysis.`,
+    //   features: [
+    //     'Kundli matching (Guna Milan)',
+    //     'Manglik Dosha remedies',
+    //     'Compatibility analysis',
+    //     'Guidance for marriage decisions',
+    //     // '<a href="http://jeevanhumsafar.com/" alt=""></a>'
+    //   ],
+    //   websites:'#/crystal'
+    // },
   {
+  id: 'crystal',
+  title: 'Crystal',
+  icon: 'assets/img/1.png',
+  shortDesc: 'Harness the healing power of crystals for balance, positivity, and energy.',
+  fullDesc: `Our Crystal Healing service uses natural crystals and gemstones 
+  to restore energy flow, promote emotional balance, and attract positivity 
+  into your life.`,
+  features: [
+    'Personalized crystal recommendations',
+    'Energy balancing and chakra alignment',
+    'Gemstone remedies for prosperity and health',
+    'Guidance for using crystals in daily life'
+  ],
+  websites: '#/crystal'
+},
+    {
   id: 'PreMarriageCounselling',
   title: 'Pre Marriage Counselling',
   icon: 'assets/img/6.png',

@@ -16,6 +16,8 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { EventsComponent } from './pages/events/events.component';
 import { AskquestionComponent } from './pages/askquestion/askquestion.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AstrolgyComponent } from './pages/services/astrolgy/astrolgy.component';
+import { CrystalComponent } from './pages/services/crystal/crystal.component';
 
 export const routes: Routes = [
     {
@@ -37,20 +39,20 @@ export const routes: Routes = [
             {
                 path: 'product',
                 component: ProductsComponent
-            }, 
-            {
-                path:'blog',
-                component:BlogComponent
             },
             {
-                path:'event',
-                component:EventsComponent
+                path: 'blog',
+                component: BlogComponent
             },
             {
-                path:'ask-question',
-                component:AskquestionComponent
+                path: 'event',
+                component: EventsComponent
             },
-            { path: 'contact', component: ContactComponent },{
+            {
+                path: 'ask-question',
+                component: AskquestionComponent
+            },
+            { path: 'contact', component: ContactComponent }, {
                 path: 'terms_condition',
                 component: TermsConditionComponent
             },
@@ -70,6 +72,14 @@ export const routes: Routes = [
                 path: 'numeralogy',
                 component: NumeralogyComponent
             },
+            {
+                path: 'astrology',
+                component: AstrolgyComponent
+            },
+            {
+                path: 'crystal',
+                component: CrystalComponent
+            },
 
             {
                 path: 'vastu',
@@ -81,38 +91,7 @@ export const routes: Routes = [
                 path: 'jewan-humsafar',
                 component: JewaanhumsafarComponent
             },
-        {path:'**',component:LayoutComponent}]
+            { path: '**', component: LayoutComponent }]
     }
-    // {
-    //     path:'terms_condition',
-    //     component:TermsConditionComponent
-    // },
-    // {
-    //     path:'privacy-policy',
-    //     component:PrivacypolicyComponent
-    // },
-    // {
-    //     path:'disclaimer',
-    //     component:DisclemerComponent
-    // },
-    // {
-    //     path:'hero',
-    //     component:HeroComponent
-    // },
-    // {
-    //     path:'numeralogy',
-    //     component:NumeralogyComponent
-    // },
-
-    // {
-    //     path:'vastu',
-    //     component:VastuComponent
-    // },
-    // { path: 'pre-marriage-counselling', component: PremarrigeComponent, title: 'Pre Marriage Counselling' },
-
-    // {
-    //     path:'jewan-humsafar',
-    //     component:JewaanhumsafarComponent
-    // }
 
 ];

@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="section-title">Our Products</h2>
     <p class="section-subtitle">
-     Shop our curated collection of pooja items and effective remedies for a harmonious life.
+      Shop our curated collection of pooja items and effective remedies for a harmonious life.
     </p>
 
     <div class="product-slider-wrapper">
@@ -19,7 +19,12 @@
                 <!-- <i class="fa" [class.fa-star]="star <= product.rating" [class.fa-star-o]="star > product.rating"></i> -->
               </span>
             </div>
+
             <h4 class="product-name">{{ product.name }}</h4>
+            <!-- Hover description -->
+            <div class="product-description">
+              {{ product.description }}
+            </div>
             <div class="product-price">
               <span class="current">₹{{ product.price }}</span>
               <!-- <span class="old" *ngIf="product.oldPrice">${{ product.oldPrice }}</span>

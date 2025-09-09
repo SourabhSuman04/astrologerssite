@@ -98,3 +98,90 @@ p {
     font-size: 1.8rem;
   }
 }
+
+.vastu-section {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 40px 20px;
+}
+
+.vastu-section .title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d6632a;
+}
+
+.vastu-section .intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.points {
+  flex: 1;
+}
+
+.subtitle {
+  margin: 30px 0 15px;
+  font-size: 1.5rem;
+  color: #d6632a;
+}
+
+.highlight-list li {
+  margin-bottom: 8px;
+}
+
+.elements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.element-card {
+  padding: 15px;
+  border-radius: 10px;
+  color: aliceblue;
+  background: #03224b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.element-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefits, .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.benefit-card, .service-card {
+  background:#03224b;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.benefit-card:hover, .service-card:hover {
+  background: #03224b;
+}

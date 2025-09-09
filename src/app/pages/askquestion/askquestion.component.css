@@ -13,7 +13,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/assets/img/photo-1503264116251-35a269479413.avif') center/cover no-repeat;
+  background: url('/assets/img/space.jpg') center/cover no-repeat;
   opacity: 0.2; /* lower = more color visible */
   z-index: 0;
 }
