@@ -15,7 +15,7 @@
     <h3>{{ service.title }}</h3>
     <div class="underline"></div>
     <p>{{ service.shortDesc }}</p>
-      <a href="javascript:void(0)" (click)="openModal(service)">READ MORE</a>
+   <a *ngIf="service.websites" [href]="service.websites" >READ MORE</a>
   </div>
 <!-- </div> -->
 

@@ -14,7 +14,7 @@ import { RouterOutlet } from "../../../../node_modules/@angular/router/router_mo
 
 @Component({
   selector: 'app-layout',
-  imports: [HeroComponent, AboutComponent, ServicesComponent, BlogComponent, EventsComponent, AskquestionComponent, ContactComponent,  ProductsComponent],
+  imports: [HeroComponent, AboutComponent, ServicesComponent, BlogComponent, EventsComponent, ProductsComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })

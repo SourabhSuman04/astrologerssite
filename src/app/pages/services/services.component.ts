@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { AstrologicalService } from '../../models/models';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+
 
 
 interface Service {
@@ -11,12 +12,12 @@ interface Service {
   shortDesc: string;
   fullDesc: string;
   features: string[];
-  websites?:string;
+  websites?:any;
 }
 
 @Component({
   selector: 'app-services',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
@@ -40,7 +41,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Life-path, career & relationship guidance',
     'Remedies for challenges & doshas'
   ],
-     websites:'#/astrology'
+     websites:'#/service/astrology'
 },
     {
       id: 'vastu',
@@ -55,7 +56,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         'Placement guidance for harmony',
         'Remedies without demolition'
       ],
-      websites:'#/vastu'
+      websites:'#/service/vastu'
     },
 {
   id: 'Numerology',
@@ -72,7 +73,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Relationship compatibility',
     'Career & success guidance'
   ],
-  websites:'#/numeralogy'
+  websites:'#/service/numeralogy'
 },
 {
   id: 'PalmReading',
@@ -119,7 +120,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Gemstone remedies for prosperity and health',
     'Guidance for using crystals in daily life'
   ],
-  websites: '#/crystal'
+  websites: '#/service/crystal'
 },
     {
   id: 'PreMarriageCounselling',
@@ -136,7 +137,7 @@ export class ServicesComponent implements OnInit, AfterViewInit {
     'Guidance on expectations & responsibilities',
     'Conflict resolution & emotional support'
   ],
-  websites:'#/pre-marriage-counselling'
+  websites:'#/service/pre-marriage-counselling'
   }
   ];
 

@@ -18,6 +18,7 @@ import { AskquestionComponent } from './pages/askquestion/askquestion.component'
 import { ContactComponent } from './pages/contact/contact.component';
 import { AstrolgyComponent } from './pages/services/astrolgy/astrolgy.component';
 import { CrystalComponent } from './pages/services/crystal/crystal.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 export const routes: Routes = [
     {
@@ -52,7 +53,9 @@ export const routes: Routes = [
                 path: 'ask-question',
                 component: AskquestionComponent
             },
-            { path: 'contact', component: ContactComponent }, {
+            { path: 'contact', component: ContactComponent }, 
+            { path:'details/:id',component:DetailsComponent},
+            {
                 path: 'terms_condition',
                 component: TermsConditionComponent
             },
@@ -69,29 +72,30 @@ export const routes: Routes = [
                 component: HeroComponent
             },
             {
-                path: 'numeralogy',
+                path: 'service/numeralogy',
                 component: NumeralogyComponent
             },
             {
-                path: 'astrology',
+                path: 'service/astrology',
                 component: AstrolgyComponent
             },
             {
-                path: 'crystal',
+                path: 'service/crystal',
                 component: CrystalComponent
             },
 
             {
-                path: 'vastu',
+                path: 'service/vastu',
                 component: VastuComponent
             },
-            { path: 'pre-marriage-counselling', component: PremarrigeComponent, title: 'Pre Marriage Counselling' },
+            { path: 'service/pre-marriage-counselling', component: PremarrigeComponent, title: 'Pre Marriage Counselling' },
 
             {
                 path: 'jewan-humsafar',
                 component: JewaanhumsafarComponent
             },
-            { path: '**', component: LayoutComponent }]
+            { path: '**', component: LayoutComponent },
+        ]
     }
 
 ];
