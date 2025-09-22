@@ -19,7 +19,7 @@
           <p class="blog-date">{{ post.publishDate | date }}</p>
           <h3 class="blog-title">{{ post.postTitle }}</h3>
           <p>{{ post.excerpt }}</p>
-          <button class="read-more-btn" (click)="openModal(post.id)">
+          <button class="read-more-btn" (click)="deatils(post)">
             Read More
           </button>
         </div>

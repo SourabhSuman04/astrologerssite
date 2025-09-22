@@ -19,7 +19,7 @@
           <p class="event-date">{{ event.eventDate | date }}</p>
           <h3 class="event-title">{{ event.eventTitle }}</h3>
           <p>{{ event.excerpt }}</p>
-          <button class="read-more-btn" (click)="openModal(event.id)">
+          <button class="read-more-btn" (click)="deatils(event)">
             Read More
           </button>
         </div>

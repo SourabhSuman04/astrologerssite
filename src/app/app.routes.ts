@@ -19,6 +19,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AstrolgyComponent } from './pages/services/astrolgy/astrolgy.component';
 import { CrystalComponent } from './pages/services/crystal/crystal.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { ProductDetailsComponent } from './pages/products/product-details/product-details.component';
 
 export const routes: Routes = [
     {
@@ -42,6 +43,10 @@ export const routes: Routes = [
                 component: ProductsComponent
             },
             {
+                path:'product-details'
+                ,component:ProductDetailsComponent
+            },
+            {
                 path: 'blog',
                 component: BlogComponent
             },
@@ -54,7 +59,7 @@ export const routes: Routes = [
                 component: AskquestionComponent
             },
             { path: 'contact', component: ContactComponent }, 
-            { path:'details/:id',component:DetailsComponent},
+            { path:'details-page',component:DetailsComponent},
             {
                 path: 'terms_condition',
                 component: TermsConditionComponent

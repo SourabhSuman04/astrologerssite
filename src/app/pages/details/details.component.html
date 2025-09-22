@@ -1,11 +1,25 @@
-<button class="back-btn" (click)="goBack()">← Back to Blog</button>
+<button class="back-btn" (click)="goBack()">← Back</button>
+
 <div class="details-container">
-    <div class="details-image">
-        <img src="https://via.placeholder.com/600x400" alt="A beautiful placeholder image">
-    </div>
-    <div class="details-content">
-        <h1>Product Heading</h1>
-        <p>This is the description for the product or item. It provides more detailed information about its features, benefits, and specifications. You can add as much text as you need to give a complete overview.</p>
-        <p>This is a second paragraph to demonstrate how the text wraps and flows within the container. You can add multiple paragraphs or other elements like lists and buttons here.</p>
-    </div>
+  <!-- Left side: Image -->
+  <div class="details-image">
+   <img [src]="details.imagePath" class="main-image" alt="{{ details.name }}" />
+  </div>
+
+  <!-- Right side: Content -->
+  <div class="details-content">
+    <h1>{{details?.eventTitle}}{{details.postTitle}}</h1>
+    <p><strong>Date:</strong> {{details?.eventDate | date}}{{details.publishDate | date}}</p>
+    <p><strong>Type:</strong> {{details?.eventType}}{{details.category}}</p>
+    <p>{{details?.description}}{{details.content}}</p>
+
+    <!-- Optional extra content -->
+    <ul *ngIf="details?.highlights?.length">
+      <li *ngFor="let point of details.highlights">{{point}}</li>
+    </ul>
+
+    <button *ngIf="details?.link" (click)="openLink(details.link)">
+      Read More
+    </button>
+  </div>
 </div>

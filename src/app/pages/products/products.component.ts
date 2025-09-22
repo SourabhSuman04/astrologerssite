@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonService } from '../../services/common.service';
 import { products } from '../../models/models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -16,6 +17,7 @@ export class ProductsComponent implements OnInit {
     const scrollAmount = slider.offsetWidth * 0.8; // move by 80% of visible area
     slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
   }
+
   products:products[] = [
   //   {
   //     name: 'Gemstone',
@@ -92,7 +94,7 @@ export class ProductsComponent implements OnInit {
   // Add more products here...
 ];
 
-constructor(private commonservice:CommonService){}
+constructor(private commonservice:CommonService,private router :Router){}
 
 ngOnInit(): void {
   
@@ -101,7 +103,10 @@ ngOnInit(): void {
   })
 
 }
-
+  buyNow(item:any) {
+    // Navigate to checkout page and pass product data
+    this.router.navigate(['/product-details'], { state: { product: item } });
+  }
 callProduct(phone: string) {
   window.location.href = `tel:${phone}`;
 }

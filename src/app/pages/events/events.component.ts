@@ -3,6 +3,7 @@ import { EventItem } from '../../models/models';
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from '../modal/modal.component';
 import { CommonService } from '../../services/common.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -21,7 +22,7 @@ export class EventsComponent implements OnInit, AfterViewInit { // Implement Aft
     selectedEvent: EventItem | null = null;
     isModalOpen: boolean = false;
 
-    constructor(private commonservice:CommonService) { }
+    constructor(private commonservice:CommonService,private router:Router) { }
 
     ngOnInit(): void {
         // Initialization logic if any
@@ -89,4 +90,9 @@ onScroll(): void {
     {
         this.showAll=true
     }
+
+     deatils(item:any) {
+    // Navigate to checkout page and pass product data
+    this.router.navigate(['/details-page'], { state: { product: item } });
+  }
 }

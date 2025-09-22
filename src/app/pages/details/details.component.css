@@ -1,103 +1,38 @@
-body {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  background: linear-gradient(135deg, #0d1b2a, #1b263b); /* cosmic dark gradient */
-  padding: 20px;
-  color: var(--text-light, #f8f8ff);
-}
-
 .details-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(30, 58, 95, 0.3); /* semi-transparent cosmic box */
-  border-radius: 12px;
-  border: 1px solid rgba(212, 175, 55, 0.3); /* subtle gold border */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  gap: 40px;
-  flex-wrap: wrap;
-  backdrop-filter: blur(10px); /* frosted glass effect */
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px 0;
+  flex-wrap: wrap; /* responsive for small screens */
 }
 
 .details-image {
-  flex: 1;
-  min-width: 320px;
+  flex: 1 1 40%;
+  max-width: 600px;
 }
 
 .details-image img {
   width: 100%;
-  height: auto;
-  display: block;
   border-radius: 10px;
   object-fit: cover;
-  border: 2px solid rgba(212, 175, 55, 0.4); /* gold border around image */
 }
 
 .details-content {
-  flex: 1.5;
-  min-width: 320px;
+  flex: 1 1 55%;
 }
 
 .details-content h1 {
-  font-size: 2.2em;
-  color: var(--accent-gold, #d4af37);
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .details-content p {
-  font-size: 1.1em;
-  line-height: 1.7;
-  color: var(--text-light, #f8f8ff);
-  margin-bottom: 15px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .details-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .details-content h1 {
-    font-size: 1.8em;
-  }
-
-  .details-content p {
-    font-size: 1em;
-  }
+  margin-bottom: 10px;
 }
 
 .back-btn {
-  background: transparent;
+  margin-bottom: 15px;
+  background-color: transparent;
   border: none;
-  color: var(--accent-gold);
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
-
-.back-btn:hover {
-  color: #ffd700;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-

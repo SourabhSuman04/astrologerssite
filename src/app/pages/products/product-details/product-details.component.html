@@ -1,0 +1,26 @@
+<div class="product-page">
+  <!-- Left: Single Image -->
+  <div class="image-gallery">
+    <img [src]="product.imagePath" class="main-image" alt="{{ product.name }}" />
+  </div>
+
+  <!-- Right: Product Info -->
+  <div class="product-info">
+    <h1 class="title">{{ product.name }}</h1>
+    <p class="description">{{ product.description }}</p>
+    <h2 class="price">₹{{ product.price }}</h2>
+
+    <div class="actions">
+      <button class="btn add-to-cart">Call</button>
+      <button class="btn buy-now">Buy Now</button>
+    </div>
+
+    <!-- UPI Payment Section -->
+    <div class="upi-payment">
+      <h3>Pay with UPI</h3>
+      <p><strong>UPI Mobile:</strong> {{ product.contactNumber }}</p>
+      <img [src]="product.qrCodeUrl" alt="UPI QR Code" class="qr-code" />
+      <p class="note">Scan this QR to pay instantly</p>
+    </div>
+  </div>
+</div>
